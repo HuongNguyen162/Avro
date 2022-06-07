@@ -1,0 +1,78 @@
+{
+  "name": "Customer",
+  "type": "record",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "customername",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    {
+      "name": "email_address",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    {
+      "name": "phone_number",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    /*    {
+          "name": "sex",
+          "type": [
+            "string",
+            "null"
+          ]
+        },*/
+    {
+      "name": "birthdate",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    {
+      "name": "Address",
+      "type": {
+        "type": "record",
+        "name": "Address",
+        "fields": [
+          {
+            "name": "district",
+            "type": "string",
+            "default": "NULL"
+          },
+          {
+            "name": "province",
+            "type": "string",
+            "default": "NULL"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sex",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "sex",
+          "symbols": [
+            "MALE",
+            "FEMALE"
+          ]
+        }
+      ]
+    }
+  ]
+}
